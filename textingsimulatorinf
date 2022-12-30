@@ -1,0 +1,30 @@
+-- inf money, diamonds, whatever
+-- game - https://www.roblox.com/games/2580982329/NEW-Pods-Texting-Simulator
+-- written by mrob
+-- currencies 
+local A_1 = 9999999999999999
+local A_2 = 9999999999999999
+local A_3 = 9999999999999999
+local A_4 = 9999999999999999
+local Event = game:GetService("ReplicatedStorage").Events.TerminalReward
+Event:FireServer(A_1, A_2, A_3, A_4)
+-- skins (robux skins)
+list = {"Green Sparkle", "Red Sparkle", "Purple Sparkle", "Blue Sparkle", "Yellow Sparkle", "Teal Sparkle", "Galacticly Pink", "Birhgtly Galaxy", "Blue Space", "Space Power", "Infinite Void", "The Last Frontier", "Interplanetary Conquerer"}
+for i = 1, #list do
+local A_1 = list[i]
+local Event = game:GetService("ReplicatedStorage").Events.GiveUnboxed
+Event:FireServer(A_1)
+end
+-- auto text
+while wait() do
+for i = 1, 10000 do
+wait()
+for i = 1, 10 do
+local A_1 = "Computer"
+local Event = game:GetService("ReplicatedStorage").Events.SendTexts
+Event:FireServer(A_1)
+end
+end
+local Event = game:GetService("ReplicatedStorage").Events.Save
+Event:FireServer()
+end
